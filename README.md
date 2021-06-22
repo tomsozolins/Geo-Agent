@@ -6,7 +6,7 @@ git clone https://github.com/tomsozolins/geo-agent.git
 ```
 --------------------------------------------
 
-DOCKER SWARM GEO AGENT STACK DEPLOYMENT
+DEPLOY TO DOCKER SWARM CLUSTER
 
 ```
 docker-compose -f docker-compose-geo-agent.yaml build
