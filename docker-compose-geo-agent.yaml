@@ -1,0 +1,49 @@
+version: "3.3"
+
+services:
+  geo_agent:
+    image: <docker-registry-url>/geo_agent
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - TZ=Europe/Riga
+    secrets:
+      - ZABBIX_ENDPOINT
+      - ZABBIX_USER
+      - ZABBIX_PASS
+      - MINIO_ENDPOINT
+      - MINIO_ACCESS_KEY
+      - MINIO_SECRET_KEY
+      - ELASTIC_ENDPOINT_1
+      - ELASTIC_ENDPOINT_2
+      - ELASTIC_ENDPOINT_3
+      - ELASTIC_USER
+      - ELASTIC_PASS
+
+secrets:
+  ZABBIX_ENDPOINT:
+    file: .ZABBIX_ENDPOINT
+  ZABBIX_USER:
+    file: .ZABBIX_USER
+  ZABBIX_PASS:
+    file: .ZABBIX_PASS
+  MINIO_ENDPOINT:
+    file: .MINIO_ENDPOINT
+  MINIO_ACCESS_KEY:
+    file: .MINIO_ACCESS_KEY
+  MINIO_SECRET_KEY:
+    file: .MINIO_SECRET_KEY
+  ELASTIC_ENDPOINT_1:
+    file: .ELASTIC_ENDPOINT_1
+  ELASTIC_ENDPOINT_2:
+    file: .ELASTIC_ENDPOINT_2
+  ELASTIC_ENDPOINT_3:
+    file: .ELASTIC_ENDPOINT_3
+  ELASTIC_USER:
+    file: .ELASTIC_USER
+  ELASTIC_PASS:
+    file: .ELASTIC_PASS
+  
+
+  
