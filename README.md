@@ -2,7 +2,7 @@
 --------------------------------------------
 CLONE GIT REPOSITORY
 ```
-git clone https://github.com/tomsozolins/geo-agent.git
+git clone https://github.com/tomsozolins/Geo-Agent.git
 ```
 --------------------------------------------
 
